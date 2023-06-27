@@ -1,0 +1,7 @@
+var apellido = "Rodriguez";
+
+
+
+
+
+imprimir nombre + " " + apellido;
