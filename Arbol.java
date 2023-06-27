@@ -98,16 +98,17 @@ public class Arbol {
                     Object condic = cond.resolver();
                     if ((boolean) condic) {
                         Arbol bloquesi = new Arbol(n);
-                        bloquesi.recorrer(); 
+                        if(n.getValue().tipo!=TipoToken.ADEMAS){
+                            bloquesi.recorrer();
+                        } 
                                               
+                    }else{
+                        Nodo adema=n.getHijos().get(n.getHijos().size()-1);
+                        Arbol bloquesi = new Arbol(adema);                      
+                            bloquesi.recorrer();                       
                     }
                     break;
-                case ADEMAS:
-                    
-                        System.out.println("hay un else");
-                    
-                    
-                    break;
+               
                 case PARA:
                     
                     Nodo ini=n.getHijos().get(0);
