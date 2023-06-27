@@ -1,6 +1,3 @@
-
-package interpretes;
-
 public enum TipoToken {
     // Crear un tipoToken por palabra reservada
     // Crear un tipoToken: identificador, una cadena y numero

@@ -1,6 +1,3 @@
-package interpretes;
-
-
 public class Token {
 
     final TipoToken tipo;

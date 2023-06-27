@@ -1,5 +1,3 @@
-package interpretes;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -41,7 +39,7 @@ public class Interpretes {
             System.out.print(">>> ");
             String linea = reader.readLine();
             if(linea == null) break; // Presionar Ctrl + D
-            ejecutar(linea+'\n');
+            ejecutar(linea);
             existenErrores = false;
         }
     }
@@ -53,15 +51,15 @@ public class Interpretes {
         /*for(Token token : tokens){
             System.out.println(token);
         }*/
-        //Parser parser = new Parser(tokens);
-        //parser.parse();
+        Parser parser = new Parser(tokens);
+        parser.parse();
         
          GeneradorPostfija gpf = new GeneradorPostfija(tokens);
         List<Token> postfija = gpf.convertir();
-        for(Token token : postfija){
+        /*for(Token token : postfija){
             System.out.print(token.lexema+", ");
-        }
-        System.out.println("");
+        }*/
+        //System.out.println("");
         /*for(Token token : postfija){
             System.out.println(token);
         }*/

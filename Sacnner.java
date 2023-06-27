@@ -1,5 +1,3 @@
-package interpretes;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -230,14 +228,7 @@ List<Token> scanTokens(){
         }
     }
 
-    if (tokens.size() >= 2) {
-                // Obtener una vista de sublista que contiene los tokens a eliminar
-                List<Token> tokensToRemove = tokens.subList(tokens.size() - 1, tokens.size());
-
-                // Remover los tokens de la lista principal
-                tokens.removeAll(tokensToRemove);
-                linea--;
-            }
+ 
 
     tokens.add(new Token(TipoToken.EOF, "", null, linea));
     return tokens;

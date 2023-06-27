@@ -1,9 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package interpretes;
-
 public class SolverAritmetico {
 
     private final Nodo nodo;
@@ -31,7 +25,7 @@ public class SolverAritmetico {
             else if(n.getValue().tipo == TipoToken.IDENTIFICADOR){
                 
                 if(!tabla.existeIdentificador(n.getValue().lexema)){
-                    System.out.println("El identificador "+n.getValue().lexema+ " no existe");
+                    System.out.println("El identificador '"+n.getValue().lexema+ "' no existe");
                     System.exit(0);
                 }else{
                     return tabla.obtener(n.getValue().lexema);
@@ -92,7 +86,7 @@ public class SolverAritmetico {
         }
         else{
             
-            System.out.println("Los tipos de dato son distintos");
+            System.out.println("Error en linea " +izq.getValue().posicion +" Los tipos de dato de "+izq.getValue().lexema+" y "+der.getValue().lexema+" son distintos");
             System.exit(0);
         }
 

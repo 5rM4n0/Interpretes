@@ -1,5 +1,3 @@
-package interpretes;
-
 import java.util.List;
 
 public class Parser {
@@ -68,7 +66,7 @@ public class Parser {
             System.out.println("Error en la linea " + preanalisis.posicion + ". No se esperaba el token " + preanalisis.tipo);
         }
         else if(!hayErrores && preanalisis.tipo.equals(TipoToken.EOF)){
-            System.out.println("Terminado con exito");
+            System.out.println("Sentencia valida");
         }
     }
     private void PROGRAM(){

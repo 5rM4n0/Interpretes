@@ -1,9 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package interpretes;
-
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +37,7 @@ public class Arbol {
                     SolverAritmetico solv = new SolverAritmetico(n,tabla);
                     Object bul = solv.resolver();
                     if(bul!=null){
-                        System.out.println("la sentencia es "+bul);
+                        //System.out.println("la sentencia es "+bul);
                     }else{
                         System.out.println("La comparación no es valida");
                         System.exit(0);
@@ -66,7 +60,7 @@ public class Arbol {
                     Object boleano = solver3.resolver();
                     
                     if(boleano!=null){
-                        System.out.println("la sentencia es "+boleano);
+                        //System.out.println("la sentencia es "+boleano);
                     }else{
                         System.out.println("La lógica no es correcta");
                         System.exit(0);
@@ -103,10 +97,8 @@ public class Arbol {
                     SolverAritmetico cond = new SolverAritmetico(si,tabla);
                     Object condic = cond.resolver();
                     if ((boolean) condic) {
-                        tabla.asignar("ademas",false );
                         Arbol bloquesi = new Arbol(n);
-                        
-                            bloquesi.recorrer(); 
+                        bloquesi.recorrer(); 
                                               
                     }
                     break;
